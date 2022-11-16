@@ -1,2 +1,117 @@
+.app {
+  height: 100vh;
+  display: flex;
+}
+
 .cardContainer {
+  background-image: url("../images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30%;
+  position: relative;
+}
+
+.formContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2rem;
+  width: 50%;
+  margin-left: 20rem;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  grid-column: 1 / -1;
+}
+
+.inputContainer label,
+.inputDateContainer label,
+.inputCvcContainer label {
+  font-size: 1.2rem;
+  color: #21092f;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+}
+
+.inputContainer input,
+.inputDateContainer input,
+.inputCvcContainer input {
+  border: solid 1px #dfdee0;
+  border-radius: 8px;
+  padding: 11px 0 11px 16px;
+  font-size: 1.8rem;
+  font-family: inherit;
+  margin-bottom: 2.6rem;
+}
+
+.inputContainer input::placeholder,
+.inputDateContainer input::placeholder,
+.inputCvcContainer input::placeholder {
+  color: #dfdee0;
+}
+
+.inputDateContainer {
+  grid-column: 1 / 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+}
+
+.inputDateContainer label {
+  grid-column: 1 / -1;
+}
+
+.inputDateContainer input {
+  grid-row: 2 / 2;
+}
+
+.inputCvcContainer {
+  grid-column: 2 / -1;
+  position: relative;
+}
+
+.inputCvcContainer label {
+  position: absolute;
+}
+.inputCvcContainer input {
+  position: absolute;
+  transform: translateY(52%);
+}
+
+@media only screen and (max-width: 1100px) {
+  .app {
+    flex-direction: column;
+  }
+  .cardContainer {
+    height: 30rem;
+    background-image: url("../images/bg-main-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+  }
+  .form {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .form {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .form {
+    width: 90%;
+  }
 }

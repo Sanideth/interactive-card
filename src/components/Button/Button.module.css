@@ -1,0 +1,10 @@
+.button {
+  grid-column: 1 / -1;
+  border-radius: 8px;
+  background-color: #21092f;
+  border: 0;
+  padding: 15px 0;
+  font-family: inherit;
+  color: #fff;
+  font-size: 18px;
+}

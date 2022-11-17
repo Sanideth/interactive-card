@@ -31,6 +31,7 @@
   flex-direction: column;
   width: 100%;
   grid-column: 1 / -1;
+  margin-bottom: 2.6rem;
 }
 
 .inputContainer label,
@@ -51,7 +52,6 @@
   padding: 11px 0 11px 16px;
   font-size: 1.8rem;
   font-family: inherit;
-  margin-bottom: 2.6rem;
 }
 
 .inputContainer input::placeholder,
@@ -61,7 +61,6 @@
 }
 
 .inputDateContainer {
-  grid-column: 1 / 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 10px;
@@ -76,18 +75,27 @@
 }
 
 .inputCvcContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.errorDateContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 1 / 1;
+  gap: 5px;
+}
+.error,
+.monthError,
+.yearError {
+  color: red;
+}
+.monthError {
+  grid-column: 1 / 1;
+}
+.yearError {
   grid-column: 2 / -1;
-  position: relative;
 }
-
-.inputCvcContainer label {
-  position: absolute;
-}
-.inputCvcContainer input {
-  position: absolute;
-  transform: translateY(52%);
-}
-
 @media only screen and (max-width: 1100px) {
   .app {
     flex-direction: column;
@@ -101,12 +109,26 @@
   }
   .form {
     margin-left: 0;
+    margin-top: 6.5rem;
+  }
+  .inputContainer {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .cardContainer {
+    height: 23rem;
+  }
+  .form {
+    margin-left: 0;
+    margin-top: 3rem;
   }
 }
 
 @media only screen and (max-width: 750px) {
   .form {
-    width: 80%;
+    width: 74%;
   }
 }
 

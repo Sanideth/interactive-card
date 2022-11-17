@@ -7,6 +7,7 @@ const InputField = ({
   value,
   type,
   placeholder,
+  ...props
 }) => {
   return (
     <>
@@ -18,6 +19,7 @@ const InputField = ({
         onChange={onChange}
         value={value}
         placeholder={placeholder}
+        {...props}
       />
     </>
   );
